@@ -1,0 +1,17 @@
+HowTo: Restore a usermangement database from a backup file in MySql Workbench:
+-----------------------------------------------------------------------------
+
+ From the menu, click on Server -> Data Import
+
+ The Data Import utility has two tabs: 'Import from Disk' and 'Import Progress'
+
+ On the 'Import from Disk' section, in the Import Options sections, click on 'Import from Self-Contained File' and browse to the backup file.
+
+ In the section 'Default Schema to be Imported To', click New...
+Enter the database name: usermanagement
+
+ Click on the 'Import Progress' tab and click the Start Import button (lower right)
+
+ Click the refresh icon at the top of the SCHEMAS tree view.
+
+ You will see the imported usermanagement database in the list of schemas.

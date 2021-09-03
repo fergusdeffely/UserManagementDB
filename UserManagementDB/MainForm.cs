@@ -34,10 +34,6 @@ namespace UserManagementDB
             {
                 MessageBox.Show("Connected to database.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                MessageBox.Show("Problem connecting to database.", "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void buttonQuery_Click(object sender, EventArgs e)

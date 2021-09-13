@@ -21,11 +21,6 @@ namespace UserManagementDB
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonConnect_Click(object sender, EventArgs e)
         {
             this.db = new DBConnection("localhost", "usermanagement", "csharp", "password");
@@ -46,7 +41,7 @@ namespace UserManagementDB
 
             foreach(User user in userList)
             {
-                userRecordsMessage += $"{user.ToString()}\n\n";
+                userRecordsMessage += $"{user.DescriptionString()}\n\n";
             }
 
             MessageBox.Show(userRecordsMessage);
@@ -60,7 +55,7 @@ namespace UserManagementDB
 
             if(usersDB.Insert(this.db, user))
             {
-                MessageBox.Show($"Successfully inserted record in users table:\n\n{user.ToString()}", "Insert Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Successfully inserted record in users table:\n\n{user.DescriptionString()}", "Insert Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -72,7 +67,7 @@ namespace UserManagementDB
 
             if (usersDB.Update(this.db, "aaaa@aaa.com", user))
             {
-                MessageBox.Show($"Successfully updated record in users table:\n\n{user.ToString()}", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Successfully updated record in users table:\n\n{user.DescriptionString()}", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

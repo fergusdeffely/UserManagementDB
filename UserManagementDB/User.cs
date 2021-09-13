@@ -47,9 +47,14 @@ namespace UserManagementDB
         public string Group { get => group; set => group = value; }
         public string Image { get => image; set => group = image; }
 
-        public override string ToString()
+        public string DescriptionString()
         {
             return $"Email: {this.email}, Name: {this.name}, Phone: {this.phone}, Admin: {this.admin}, Password: {this.PasswordHidden}, Group: { this.group}, Image: {this.image}";
+        }
+
+        public override string ToString()
+        {
+            return this.name;
         }
     }
 }
